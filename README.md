@@ -1,7 +1,7 @@
 # Air-Quality-and-Lung-Cancer
 
 # Methods Used
-Supervised Machine Learning; Linear Regression, Random Forest Regression, Support Vector Machines (SVM), Decision Tree Classifier
+ETL, Supervised Machine Learning; Linear Regression, Random Forest Regression, Support Vector Machines (SVM), Decision Tree Classifier
 
 # Technologies
 Python Pandas, Python Matplotlib, HTML, Heroku, Sklearn
