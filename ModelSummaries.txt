@@ -1,0 +1,39 @@
+Write a paragraph for each model.
+Explain what the model is and what the outcome means.
+
+Each of the following machine learning models fall into supervised learning.
+
+Model 1 - Decision Tree Regression
+Decision trees are one of the most commonly used supervised learning approaches due to
+being simpler to understand, requires less data cleaning and the fact that non-linearity
+does not affect its performance. It is also clearer to understand this model's decision-making
+process, because each decision branch can be observed. The downside is that there may be 
+an over-fitting issue. We first applied our dataset to a decision tree regression using the
+Lung_Cancer feature as our dependent variable and ___, __, and __ as our independent variables
+to determine how much land, water and air quality impacted the rate of lung cancer deaths 
+per 10,000 people. 
+
+
+Model 2 - Support Vector Machine
+Although widely used for classification purposes, support vector machine (SVM) is popular
+due to it producing significant accuracy with less computation power. The goal in SVM is
+to find a hyperplane that has the maximum margin (the max distance between data points of each class)
+in an N-dimensional space that classifies the data points. Since we used ___ features, 
+our model was a __-dimensional space.
+
+"the output of the linear function and if that output is greater than 1, we identify it with one
+class and if the output is -1, we identify is with another class. Since the threshold values are 
+changed to 1 and -1 in SVM, we obtain this reinforcement range of values([-1,1]) which acts as margin."
+
+
+Model 3 - Linear regression
+The linear regression algorithm is the most fundamental of machine learning models.
+It finds the best linear line and the best values of intercept and coefficients to reduce error.
+We used the multiple linear regression model in order to apply multiple independent variables.
+
+
+Model 4 - Random Forest Regression
+To combat the potential outcome of over-fitting, we tested our data using the random forest
+algorithm. It combines predictions from multiple decision trees for an average to create 
+a more accurate prediction than a single model could. It uses bagging and feature randomness
+to build individual trees to create an uncorrelated forest.
