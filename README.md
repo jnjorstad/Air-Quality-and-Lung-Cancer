@@ -1,7 +1,7 @@
 # Air-Quality-and-Lung-Cancer
 
 # Methods Used
-Supervised Machine Learning; Linear Regression, Random Forest Regression, SVM
+Supervised Machine Learning; Linear Regression, Random Forest Regression, Support Vector Machines (SVM), De
 
 # Technologies
 Python Pandas, Python Matplotlib, HTML, Heroku, Postgres
