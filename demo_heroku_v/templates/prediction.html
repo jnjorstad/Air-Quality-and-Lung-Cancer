@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prediction</title>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="jumbotron" style="text-align: center">
+            <br>
+            <h2>Lung Cancer Mortality Prediction</h2>
+            <br>
+        </div>
+        <div class="row" >
+            <div class="col-md-offset-2 col-md-8">
+                <form method="POST" action="/send" role="form", name="mpgform">
+                    <div class="form-group">
+                        <label for="inputName">  </label>
+                        <select class="form-select form-select-lg mb-3" class="btn btn-secondary dropdown-toggle" aria-label=".form-select-lg example" name = 'model'>
+                            <option value="0">Select Your Model</option>                            
+                            <option value="1">Linear Regression</option>
+                            <option value="2">Support Vector Machine (SVM)</option>
+                            <option value="3">Random Forest Regression</option>
+                        </select>                          
+                    </div>
+                    <br>
+                    <hr class="featurette-divider">
+                    <br>
+                    <div class ="bd-exmaple shadow p-3 mb-5 bg-body rounded" style="text-align: center">
+                        <h3> Prediction</h3>
+                        <br>    
+                        <div class="d-none d-lg-block "style="text-align: left"><b>{{result}}</b></div>
+                        
+                    </div>
+                    <br>
+                    <hr class="featurette-divider">
+                    <br> 
+                    <div class="form-group">
+                        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                            <ol class="breadcrumb">                              
+                              <li class="breadcrumb-item"><h5><b>Enter Air Quality Specifications Below</b></h5> </a></li>
+                              <li class="breadcrumb-item active" aria-current="page"><a href="/datatable"> Definition</a></li>
+                            </ol>
+                        </nav>
+                        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb"></nav>
+                        <label for="inputName">PM2.5 </label>
+                        <input type="text" class="form-control" id="inputPM2.5" name="PM25" placeholder="1 to 20 (micrograms per cubic meter)">
+                        <br>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputName">Land_EQI</label>
+                        <input type="text" class="form-control" id="inputlandeqi" name="landeqi" placeholder="-7 to 3 (Land EQI index)">
+                        <br>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputName">Sociod_EQI</label>
+                        <input type="text" class="form-control" id="inputsociodeqi" name="sociodeq" placeholder="-5 to 4 (Socio EQI index) ">
+                        <br>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputName">Built_EQI</label>
+                        <input type="text" class="form-control" id="inputbuilteqi" name="builteqi" placeholder=" -4 to 4 ">
+                        <br>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputName">CLU50_1</label>
+                        <input type="text" class="form-control" id="inputCLU505" name="CLU50" placeholder=" 1 to 50 ">
+                        <br>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputLat">PM10</label>
+                        <input type="text" class="form-control" id="inputPM10" name="PM10"
+                            placeholder="1 to 40 (micrograms per cubic meter)">
+                        <br>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputLon">SO2</label>
+                        <input type="text" class="form-control" id="inputSO2" name="SO2" placeholder="1 to 13,000 (ppbv ultraviolet fluorescence)">
+                        <br>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputLon">NO2</label>
+                        <input type="text" class="form-control" id="inputNO2" name="NO2" placeholder="1 to 9,000  (parts per billion)">
+                        <br>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputLon">O3</label>
+                        <input type="text" class="form-control" id="inputO3" name="O3" placeholder="1 to 85,000 (Dobson units)">
+                        <br>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputLon">CO</label>
+                        <input type="text" class="form-control" id="inputCO" name="CO" placeholder="1 to 25,000 (parts per million)">
+                        <br>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputLon">CN</label>
+                        <input type="text" class="form-control" id="inputCN" name="CN" placeholder="0.0001 to 1.5">
+                        <br>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputLon">Diesel</label>
+                        <input type="text" class="form-control" id="inputdiesel" name="diesel"
+                            placeholder="1 to 10">
+                        <br>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputLon">CS2</label>
+                        <input type="text" class="form-control" id="inputCS2" name="CS2" placeholder="0.0000007 to 2.5">
+                        <br>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputName">Air_EQI</label>
+                        <input type="text" class="form-control" id="inputAirEQI" name="airEQI" placeholder="-3 to 3 ">
+                        <br>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputName">Water_EQI</label>
+                        <input type="text" class="form-control" id="inputwaterEQI" name="waterEQI" placeholder="-2 to 2 ">
+                        <br>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputName">LCI</label>
+                        <input type="text" class="form-control" id="inputLCI" name="LCI" placeholder="9 to 48 ">
+                        <br>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputName">UCI</label>
+                        <input type="text" class="form-control" id="inputUCI" name="UCI" placeholder="17 to 225 ">
+                        <br>
+                    </div>
+                    <br>
+                    <div style="text-align: center">
+                        <input type="submit" style="text-align: center" value="Submit" class="btn btn-secondary">
+                        <br>
+                    </div>
+                </form>
+                
+                <br>
+   
+            </div>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+
+<hr class="featurette-divider">
+
+<!-- FOOTER -->
+<footer class="container">
+    <!-- <li class = "breadcrumb-item"><a href="/index">Back to Homepage</a></li> -->
+    <p>&copy; August 2022 Designed by Project Team 2 : Amelia Horton &middot; Indranil Roy &middot; Jenna Jorstad &middot; Nina Padgett &middot; Ying Sun &middot;</p>
+</footer>
+
+</html>
