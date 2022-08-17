@@ -20,6 +20,6 @@ Disel - hydrocarbon
 CS2 - carbon disulfide
 LCI - lower confidence interval
 UCI - upper confidence interval
-	Confidence interval - range of estimates for an unknown parameter that is a statistical measure of how likely the parameter is to fit within that window
+	Confidence interval - range of estimates for an unknown parameter based on confidence level, which represents what percentage of the actual values should be within that range
 AAC - ambient air quality
-RT - air quality classifier (3 values)
+RT - air quality classifier (3 values - rising, stable, or falling)
