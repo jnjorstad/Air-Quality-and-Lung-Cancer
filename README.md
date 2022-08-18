@@ -2,7 +2,7 @@
 
 # Background:
 
-Lung cancer kills more men and women in the U.S. than any other cancer. When you think of risk factors for lung cancer, what comes to mind? Most of us think about the risk associated with smoking cigarettes, but did you know that air pollution can also cause lung cancer and so can poor land and water environment qualities? Overwhelming evidence shows that particle pollution in the outdoor air we breathe—like that from vehicle exhaust, coal-fired power plants, and other industrial sources, forest fires, organic chemicals, metals, soil, and dust particles—can cause lung cancer and increases the risk of dying early. Here, we tested various supervised learning methods to predict how environmental qualities can have an effect on lung cancer mortality in the United States.
+Lung cancer kills more people in the U.S. than any other cancer. When you think of risk factors for lung cancer, what comes to mind? Most of us think about the risk associated with smoking cigarettes, but did you know that air pollution can also cause lung cancer and so can poor land and water environment qualities? Overwhelming evidence shows that particle pollution in the outdoor air we breathe—like that from vehicle exhaust, coal-fired power plants, and other industrial sources, forest fires, organic chemicals, metals, soil, and dust particles—can cause lung cancer and increases the risk of dying early. Here, we tested various supervised learning methods to predict how environmental qualities can have an effect on lung cancer mortality in the United States.
 
 # Rationale:
 
