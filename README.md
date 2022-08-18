@@ -21,9 +21,7 @@ Population-based lung cancer incidence rates for 2010-2014 were abstracted from 
 
 All three state-of-the-art supervised learning methods--i) linear Regression, ii) random forest Regression, and iii) Support Vector Regression--perform well on the cleaned dataset. Both LinearRegression and RandomForestRegressor works better than SVR model.
 
-![alt text]([http://url/to/img.png](https://github.com/jnjorstad/Air-Quality-and-Lung-Cancer/blob/main/performance_table.png)
-
-https://github.com/jnjorstad/Air-Quality-and-Lung-Cancer/blob/main/performance_table.png
+![alt text]([http://url/to/img.png](https://github.com/jnjorstad/Air-Quality-and-Lung-Cancer/blob/main/performance_table.png))
 
 # Analyses:
 
