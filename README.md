@@ -23,7 +23,7 @@ All three state-of-the-art supervised learning methods--i) linear Regression, 
 
 ![performance_table](performance_table.png)
 
-# Analyses:
+# Conclusions:
 
 * LinearRegression model works a touch better than RandomForestRegressor model. 
 * Both LinearRegression and RandomForestRegressor works much better than SVR model. 
@@ -31,4 +31,3 @@ All three state-of-the-art supervised learning methods--i) linear Regression, 
 * Overall, our findings can help understanding the use of various supervised learning algorithms for predicting lung cancer mortality based on various air pollutants features as well as land and water quality indexes.
 * The scope of this work is limited. The results solely depend on the dataset, data range used for training, and the features considered for training.
 
-# Preview:
