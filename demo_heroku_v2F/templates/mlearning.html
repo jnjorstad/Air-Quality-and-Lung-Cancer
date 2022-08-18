@@ -118,7 +118,7 @@
         <p class="lead">The linear regression algorithm is the most fundamental of machine learning models.
           It finds the best linear line and the best values of intercept and coefficients to reduce error.
           We used the multiple linear regression model in order to apply multiple independent variables.</p>
-        <p>r-squared: 0.9991</p>
+        <p>R-squared (r2): 0.9991 and mean squared error (MSE): 0.5137</p>
       </div>
       <div class="col-md-5">
         <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
@@ -134,12 +134,12 @@
 
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading fw-normal lh-1">Support Vector Machine Regression <span class="text-muted"> </span></h2>
+        <h2 class="featurette-heading fw-normal lh-1">Support Vector Machine Regression (SVR) <span class="text-muted"> </span></h2>
         <p class="lead">Although widely used for classification purposes, support vector machine (SVM) is popular
           due to it producing significant accuracy with less computation power. The goal in SVM is
           to find a hyperplane that has the maximum margin (the max distance between data points of each class)
           in an N-dimensional space that classifies the data points.</p>
-          <p>mean-squared: 3.2868</p>
+          <p>R-squared (r2): 0.9647 and mean squared error (MSE): 3.2868</p>
       </div>
       <div class="col-md-5 order-md-1">
         <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
@@ -159,7 +159,7 @@
           the random forest algorithm. It combines predictions from multiple decision trees for an average 
           to create a more accurate prediction than a single model could. It uses bagging and feature randomness
           to build individual trees to create an uncorrelated forest.</p>
-          <p>mean-squared: 1.0901
+          <p>R-squared (r2): 0.9961 and mean squared error (MSE): 1.0901
           </p>
       </div>
       <div class="col-md-5">
@@ -170,6 +170,19 @@
           </a>
         </figure>
       </div>
+    </div>
+
+    <hr class="featurette-divider">
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">Comparison of Model Performances <span class="text-muted"> </span></h2>
+        <figure>
+          <a target="_blank" href="../static/img/performance_table.png">
+            <img class="img-center" src="../static/img/performance_table.png" width="800" height="180" alt="image">
+          </a>
+        </figure>
+      </div>
+      
     </div>
 
     <hr class="featurette-divider">
