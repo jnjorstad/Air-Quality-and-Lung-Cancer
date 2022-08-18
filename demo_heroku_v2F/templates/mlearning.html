@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Air Quality Lung Cancer</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="carousel.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <style>
+       /* Modify the background color */
+         
+       .navbar-custom {
+            background-color: #0099da;
+        }
+      
+      /* Modify the Navbar text color */
+         
+      .navbar-text {
+            color: white!important;
+
+        }
+
+      .navbar-custom:hover{
+        text-decoration:none;
+        background-color:lightslategray;
+
+      }
+      
+        .navbar-nav {
+        margin-left: 85%;
+        /* display: inline-block; 
+        padding: 2px;
+        border-radius: 20px;
+        background:rgba(128,128,128); */
+        }
+
+      .captionbox {
+        background-color:rgba(255,255,255,0,0.8);
+        width:800px;
+        padding:30px;
+        top:255px;
+        left:60%!important;
+      }
+
+      .fill-image {
+        object-fit: contain;
+      }
+
+      .scale-down-image {
+        object-fit: scale-down;
+      }
+
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<header>
+  <nav class="navbar navbar-expand-md navbar-custom fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" style = "color: white;" href="/index"><b><h4>Air Quality Lung Cancer</h4></b></a> 
+
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mx-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <!-- <a class="nav-link active" aria-current="page" href="/datatable"><h5 class = "navbar-text">Hospital Info </h5></a> -->
+            <a class="nav-link" style = "color: white;" aria-current="page" href="/datatable"><b> <h4>Data </h4> </b></a>
+          </li>
+          <li class="nav-item" class="btn btn-secondary dropdown-toggle">
+            <a class="nav-link" style = "color: white;" aria-current="page" href="/mlearning"><b> <h4>Models </h4> </b></a>
+              <!-- <div class="btn-group">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                  Models
+                </button>
+                <ul class="dropdown-menu dropdown-menu-lg-end">
+                  <li><button class="dropdown-item" type="button">Support Vector Machine (SVM)</button></li>
+                  <li><button class="dropdown-item" type="button">Decision Tree</button></li>
+                  <li><button class="dropdown-item" type="button">Linear Regression</button></li>
+                  <li><button class="dropdown-item" type="button">Random Forest Regression</button></li>
+                </ul>
+              </div> -->
+          </li>
+          <li class="nav-item">
+            <!-- <a class="nav-link active" aria-current="page" href="/datatable"><h5 class = "navbar-text">Hospital Info </h5></a> -->
+            <a class="nav-link" style = "color: white;" aria-current="page" href="/prediction"><b> <h4>Prediction</h4> </b></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="container marketing">
+    <!-- START THE FEATURETTES -->
+    <div class="row" style = "margin-top:5em;">
+      <p> <h2> <b>Overview </b> </h2></p>
+      <p> Each of the following three supversided machine learning models were used to train and test the dataset.</p>
+    </div>
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">Linear regression <span class="text-muted"> </span></h2>
+        <p class="lead">The linear regression algorithm is the most fundamental of machine learning models.
+          It finds the best linear line and the best values of intercept and coefficients to reduce error.
+          We used the multiple linear regression model in order to apply multiple independent variables.</p>
+        <p>r-squared: 0.9991</p>
+      </div>
+      <div class="col-md-5">
+        <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+        <figure>
+          <a target="_blank" href="../static/img/linear.jpg">
+            <img class="img-center" src="../static/img/linear.jpg" alt="image">
+          </a>
+        </figure>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1">Support Vector Machine Regression <span class="text-muted"> </span></h2>
+        <p class="lead">Although widely used for classification purposes, support vector machine (SVM) is popular
+          due to it producing significant accuracy with less computation power. The goal in SVM is
+          to find a hyperplane that has the maximum margin (the max distance between data points of each class)
+          in an N-dimensional space that classifies the data points.</p>
+          <p>mean-squared: 3.2868</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+        <figure>
+          <a target="_blank" href="../static/img/svm.jpg">
+            <img class="img-center" src="../static/img/svm.jpg" alt="image">
+          </a>
+        </figure>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">Random Forest Regression <span class="text-muted"> </span></h2>
+        <p class="lead">To combat the potential outcome of over-fitting in a decision tree model, we tested our data using
+          the random forest algorithm. It combines predictions from multiple decision trees for an average 
+          to create a more accurate prediction than a single model could. It uses bagging and feature randomness
+          to build individual trees to create an uncorrelated forest.</p>
+          <p>mean-squared: 1.0901
+          </p>
+      </div>
+      <div class="col-md-5">
+        <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+        <figure>
+          <a target="_blank" href="../static/img/RMF.jpg">
+            <img class="img-center" src="../static/img/RMF.jpg" alt="image">
+          </a>
+        </figure>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+
+      <!-- FOOTER -->
+  <footer class="container">
+      <!-- <p class="float-end"><a href="/index">Back to Homepage</a></p> -->
+      <p>&copy; August 2022 Designed by Project Team 2 : Amelia Horton &middot; Indranil Roy &middot; Jenna Jorstad &middot; Nina Padgett &middot; Ying Sun &middot; <a href="#"></a> </p>
+  </footer>
+
+</main>
+
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>  
+
+      
+  </body>
+</html>
