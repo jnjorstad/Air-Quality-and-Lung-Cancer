@@ -36,8 +36,9 @@ def home():
 def datatable():
        
     # converting csv to html
-    data = pd.read_csv("./static/data/column_name_key_rev.md.csv")
-    return render_template("datatable.html", tables=[data.to_html(index=False)], titles=[''])
+    # data = pd.read_csv("./static/data/column_name_key_rev.md.csv")
+    return render_template("datatable.html")
+    #, tables=[data.to_html(index=False)], titles=[''])
 
     # return render_template("datatable.html")
 
