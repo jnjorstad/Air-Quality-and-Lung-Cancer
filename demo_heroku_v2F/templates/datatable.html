@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewpoint" content="wideth=device-width,initial-scale=1.0">
+        <title> Data </title>              
+    
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src="carousel.js"></script>
+
+
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: white;
+        }
+        
+        /*Table rules*/
+        table{
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9em;
+            min-width: 400px;
+            text-align: right;
+        }
+
+        thead tr{
+
+            color:#000;
+            text-align: center!important;
+            font-weight: bold;            
+        }
+        thead th{
+            background-color:#0099da!important;
+            color:#fff;
+            padding: 10px 25px;
+        }
+
+        td:first-child{
+            text-align:left;         
+
+        }
+
+        td:nth-child(2){
+            text-align:left;            
+        }
+
+        tr:nth-child(odd){
+            background: lightgrey;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #000;
+        }
+
+        td {
+            padding: 4px 16px;
+        }
+
+        .table-title {
+            color:#0099da;
+        }
+        
+        .navbar-custom {
+            background-color: #0099da;}
+    </style>
+        <link href="carousel.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <header>
+            <nav class="navbar navbar-expand-md navbar-custom fixed-top" >
+                <div class="container-fluid">
+                <a class="navbar-brand" style = "color: white;" href="/index"><b><h4>Air Quality Lung Cancer</h4></b></a> 
+            
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mx-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" style = "color: white;" aria-current="page" href="/datatable"><b> <h4>Data </h4> </b></a>
+                    </li>
+                    <li class="nav-item" class="btn btn-secondary dropdown-toggle">
+                        <a class="nav-link" style = "color: white;" aria-current="page" href="/mlearning"><b> <h4>Models </h4> </b></a>
+                    </li>
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" style = "color: white;" aria-current="page" href="/prediction"><b> <h4>Prediction</h4> </b></a>
+                    </li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+        </header>
+
+    <body>
+
+        <div class="overlay-image" style ="margin-top:10em">
+
+            <div align ="center">
+            <p align = "center"><h1 class = "table-title">Air Quality Specifications</h1></p>
+            <br>
+
+                   
+                    {%for table in tables%}
+                        {{ table|safe }}                           
+                    {% endfor %}
+                    <!-- </h1>  -->
+            </div>
+            <br>
+            <br>
+        </div>
+        <hr class="featurette-divider">
+        <br>
+        <br>
+        <p ><h2 class = "table-title" style="text-align: center">Data Table</h2></p>
+        <br>
+        
+        <div class="col-md-2"></div>
+
+        <div clss ="col-md-10">
+            <figure style="text-align: center">
+              <a target="_blank" href="../static/img/datasheet_c.jpg">
+                <img class="img-center" src="../static/img/datasheet_c.jpg" alt="image">
+              </a>
+            </figure>
+        </div>
+        
+        <p style="text-align: center">* Above table is a snapshot of the data table used for machine traninig. </p>
+        <p style="text-align: center">Please contact project team for a copy of data file if interested. </p>
+    </body>
+
+    <hr class="featurette-divider">
+      <!-- FOOTER -->
+    <footer class="container">
+        <!-- <li class="float-end"><a href="\index">Back to Homepage</a></li> -->
+        <p>&copy; August 2022 Designed by Project Team 2 : Amelia Horton &middot; Indranil Roy &middot; Jenna Jorstad &middot; Nina Padgett &middot; Ying Sun &middot;</p>
+    </footer>
+</html>
