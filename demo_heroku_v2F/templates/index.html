@@ -71,7 +71,7 @@
 <header>
   <nav class="navbar navbar-expand-md navbar-custom fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" style = "color: white;" href="/index"><b><h4>Air Quality Lung Cancer</h4></b></a> 
+      <a class="navbar-brand" style = "color: white;"><b><h4>Air Quality Lung Cancer</h4></b></a> 
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mx-auto mb-2 mb-md-0">
           <li class="nav-item">
@@ -183,7 +183,7 @@
     <div class="row featurette">
       <div class="col-md-7">
         <h2 class="featurette-heading fw-normal lh-1"><b>Project Overview </b><span class="text-muted"> </span></h2>
-        <p class="lead"><h4><b>Impact of Environment Quality on Lung Cancer Survival</b></p></h4>
+        <p class="lead"><h4><b>Topic: Impact of Environment Quality on Lung Cancer Mortality</b></p></h4>
 
           <p>Lung cancer kills more men and women in the U.S. than any other cancer. 
             When you think of risk factors for lung cancer, what comes to mind?             
@@ -193,9 +193,7 @@
             shows that particle pollution in the outdoor air we breathe—like that 
             from vehicle exhaust, coal-fired power plants, and other industrial sources, 
             forest fires, organic chemicals, metals, soil, and dust particles—can cause 
-            lung cancer and increases the risk of dying early. 
-            
-            Here, we tested various supervised learning methods to predict how 
+            lung cancer and increases the risk of dying early. Here, we tested various supervised learning methods to predict how 
             environmental qualities can have an effect on lung cancer mortality 
             in the United States. </p>
           
@@ -225,7 +223,8 @@
             mortality information is missing were omitted from the data set, the Union County, 
             Florida is an outlier in terms of mortality information which was deleted from the 
             data set. The dataset is available free of cost from 
-            https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/HMOEJO. <br>
+            <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/HMOEJO"> this link.</a> 
+             <br>
             
             Then we used this dataset and preprocessed it by dropping unnecessary columns, 
             deleting rows with Null values, and deleting rows containing asterisk symbols. 
@@ -235,16 +234,21 @@
           
           <p><h4><b>Results:</b></p></h4>
           
-          <p>All the following three state-of-the-art supervised learning methods performed well on the 
+          <p>Following three state-of-the-art supervised learning methods performed well on the 
             final dataset:<br>
             i) linear Regression, <br>
             ii) random forest Regression, and <br>
-            iii) Support Vector Regression
-          </p>                
+            iii) Support Vector Regression <br>
+            <!--Both Linear Regression and Random Forest Regresson model works better than SVR model.-->
           
           <p><h4><b>Conclusions:</b></p></h4>
           
-          Both LinearRegression and RandomForestRegressor works better than SVR model.</p>
+          (i) LinearRegression model works a touch better than RandomForestRegressor model.<br>
+          (ii) Both LinearRegression and RandomForestRegressor works much better than SVR model.<br>
+          (iii) SVR model can also be used for prediction with reasonable accuracy for this particular dataset.<br>
+          (iv) Overall, our findings can help understanding the use of various supervised learning algorithms for predicting lung cancer mortality based on various air * pollutants features as well as land and water quality indexes.<br>
+          (v) The scope of this work is limited. The results solely depend on the dataset, data range used for training, and the features considered for training.</p>
+        </p> 
       </div>
       <div class="col-md-5">
         <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
