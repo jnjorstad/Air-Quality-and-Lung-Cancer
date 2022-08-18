@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewpoint" content="wideth=device-width,initial-scale=1.0">
+        <title> Data </title> 
+
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src="carousel.js"></script>
+
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: white;
+        }
+        
+        /*Table rules*/
+        table{
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9em;
+            min-width: 400px;
+            text-align: right;
+        }
+
+        thead tr{
+
+            color:#000;
+            text-align: center!important;
+            font-weight: bold;            
+        }
+        thead th{
+            background-color:#0099da!important;
+            color:#fff;
+            padding: 10px 25px;
+        }
+
+        td:first-child{
+            text-align:left;         
+
+        }
+
+        td:nth-child(2){
+            text-align:left;            
+        }
+
+        tr:nth-child(odd){
+            background: lightgrey;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #000;
+        }
+
+        td {
+            padding: 4px 16px;
+        }
+
+        .table-title {
+            color:#0099da;
+        }
+    </style>
+        <link href="carousel.css" rel="stylesheet">
+    </head>
+    <body>
+    
+    <header>
+        <nav class="navbar navbar-expand-md navbar-custom fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" style = "color: white;"><b><h4>Air Quality Lung Cancer</h4></b></a> 
+        
+              <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mx-auto mb-2 mb-md-0">
+                  <li class="nav-item">
+                    <!-- <a class="nav-link active" aria-current="page" href="/datatable"><h5 class = "navbar-text">Hospital Info </h5></a> -->
+                    <a class="nav-link" style = "color: white;" aria-current="page" href="/datatable"><b> <h4>Data </h4> </b></a>
+                  </li>
+                  <li class="nav-item" class="btn btn-secondary dropdown-toggle">
+                    <a class="nav-link" style = "color: white;" aria-current="page" href="/mlearning"><b> <h4>Models </h4> </b></a>
+                  </li>
+                  <li class="nav-item">
+                    <!-- <a class="nav-link active" aria-current="page" href="/datatable"><h5 class = "navbar-text">Hospital Info </h5></a> -->
+                    <a class="nav-link" style = "color: white;" aria-current="page" href="/prediction"><b> <h4>Prediction</h4> </b></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+    </header>
+
+
+        <div align ="center">
+        <p align = "center"><h1 class = "table-title">Air Quality Specifications</h1></p>
+        <br>
+        <!-- <div class="text-md-end text-black-50 captionbox" style = "Margin-left:50px;">
+            <h3 style=color:#0099da>Total Number of Hospitals: 125 </h3>
+            <h3 style=color:#0099da>Total Number of Staffed Beds: 28,278 </h3>
+            <h3 style=color:#0099da>Average person Hospitalized per day: 15,258 </h3>
+            <h3 style=color:#0099da>Average Daily Medical Spending : $434K</h3>
+            <br>
+        </div> -->
+
+        <!-- <div class="col-lg-3">
+            <figure>
+              <a target="_blank" href="../static/img/Icon_facefrownv2.png">
+              <img class="img-fluid w-50" src="../static/img/Icon_facefrownv2.png" alt="face frown">
+              </a>
+              <figcaption><em>Face Frown</em></figcaption> -->
+            <!-- </figure>
+        </div> -->
+                <!-- <h1 class = "table"> -->
+                <!--Displaying the converted table-->
+                {%for table in tables%}
+                    {{ table|safe }}                           
+                {% endfor %}
+                <!-- </h1>  -->
+        </div>
+        <br>
+        <hr class="featurette-divider">
+        <br>
+        
+        <div class="row featurette">
+            <div class ="w-100 p-3" style="text-align: center"></div>
+            <div class ="col-md-5 order-md-1 table-title" style="text-align: center">
+                <p align = "center"><h2 class = "table-title">Data Table</h2></p>
+            </div>
+            <div class="col-lg-3"></div>
+            <div class="col-md-6" style="text-align: center">
+                <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="1200" height="1200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+                <a style="text-align: center" href="../static/img/dataset_screenshot_webpage.PNG"></a>
+            </div>
+            <div class="col-lg-3">
+                <figure>
+                    <img class = "img-fluid w-50" style="text-align: center" src="../static/img/dataset_screenshot_webpage.PNG" >
+                </figure>
+                <p> * Above is a screenshot of data table due to data size.  Contact Project Team to obtain the data file if you would like. </p>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+    </body>
+
+      <!-- FOOTER -->
+    <footer class="container">
+        <!-- <li class="float-end"><a href="\index">Back to Homepage</a></li> -->
+        <p>&copy; August 2022 Designed by Project Team 2 : Amelia Horton &middot; Indranil Roy &middot; Jenna Jorstad &middot; Nina Padgett &middot; Ying Sun &middot;</p>
+    </footer>
+</html>
